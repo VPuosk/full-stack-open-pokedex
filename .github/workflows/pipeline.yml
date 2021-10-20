@@ -34,3 +34,4 @@ jobs:
           heroku_email: ${{secrets.HEROKU_EMAIL}}
           healthcheck: "https://fierce-scrubland-47647.herokuapp.com/health"
           checkstring: "ok"
+          rollbackonhealthcheckfailed: true
