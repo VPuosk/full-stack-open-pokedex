@@ -1,1 +1,1 @@
-web: npm run borkbork
+web: npm run start-prod
