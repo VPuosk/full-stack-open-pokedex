@@ -3,7 +3,7 @@ name: Scheduled event
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '0 4 * * *' # once at 0400
+    - cron:  '30,0 * * * *' # every 30 minutes
 
 jobs:
   scheduler:
