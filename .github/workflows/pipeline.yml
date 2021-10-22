@@ -40,6 +40,13 @@ jobs:
           healthcheck: "https://fierce-scrubland-47647.herokuapp.com/health"
           checkstring: "ok"
           rollbackonhealthcheckfailed: true
+      - name: Check the deployed service URL
+        uses: jtalk/url-health-check-action@v2
+        with:
+          url: https://fierce-scrubland-47647.herokuapp.com/health
+          follow-redirect: false # Optional, defaults to "no"
+          max-attempts: 3 # Optional, defaults to 1
+          retry-delay: 10s # Optional, only applicable to max-attempts > 1
       ## as i didn't want to flood the slack i commented these away
       #- name: slack success
       #  if: ${{ job.status == 'success' }}
