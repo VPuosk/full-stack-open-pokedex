@@ -1,18 +1,18 @@
-name: Scheduled event
+#name: Scheduled event
 
-on:
-  schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron:  '30,0 * * * *' # every 30 minutes
+#on:
+#  schedule:
+#    # * is a special character in YAML so you have to quote this string
+#    - cron:  '30,0 * * * *' # every 30 minutes
 
-jobs:
-  scheduler:
-    runs-on: ubuntu-18.04
-    steps:
-      - name: Check the deployed service URL
-        uses: jtalk/url-health-check-action@v2
-        with:
-          url: https://fierce-scrubland-47647.herokuapp.com/health
-          follow-redirect: false # Optional, defaults to "no"
-          max-attempts: 3 # Optional, defaults to 1
-          retry-delay: 10s # Optional, only applicable to max-attempts > 1
+#jobs:
+#  scheduler:
+#    runs-on: ubuntu-18.04
+#    steps:
+#      - name: Check the deployed service URL
+#        uses: jtalk/url-health-check-action@v2
+#        with:
+#          url: https://fierce-scrubland-47647.herokuapp.com/health
+#          follow-redirect: false # Optional, defaults to "no"
+#          max-attempts: 3 # Optional, defaults to 1
+#          retry-delay: 10s # Optional, only applicable to max-attempts > 1
