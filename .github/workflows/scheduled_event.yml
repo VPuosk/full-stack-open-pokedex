@@ -13,6 +13,6 @@ jobs:
         uses: jtalk/url-health-check-action@v2
         with:
           url: https://fierce-scrubland-47647.herokuapp.com/health
-          follow-redirect: no # Optional, defaults to "no"
-          max-attempts: 2 # Optional, defaults to 1
-          retry-delay: 5s # Optional, only applicable to max-attempts > 1
+          follow-redirect: false # Optional, defaults to "no"
+          max-attempts: 3 # Optional, defaults to 1
+          retry-delay: 10s # Optional, only applicable to max-attempts > 1
